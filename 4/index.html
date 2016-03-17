@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> its second lesson</title>
+    </head>
+    <body>
+        First Name : <input id="firstName" type="text"/>
+        <span id="nameId"></span>
+        <script>
+            var fName = document.getElementById("firstName");
+            var nameId = document.getElementById("nameId");
+            fName.addEventListener('keyUp' , function(){
+                var text = fName.nodeValue;
+                console.log(text);
+                nameId.innerHTML = text;
+                console.log("keyup event listened");
+            });
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html ng-app='app'>
+    <head>
+        <meta charset="utf-8">
+        <title> its true start time</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script>
+            angular.module('app' , []).controller('app-ctrl' , function($scope){
+               $scope.firstName = 'roshan';
+                $scope.$watch('firstName' , function(oldName , newName){
+                    console.log("value has chnged to :"+newName);
+                });
+                setTimeout(function(){
+                    $scope.lastName = "yadav";
+                    $scope.$apply();
+                } , 1000);
+            });
+        </script>
+        
+    </head>
+
+    <body ng-controller='app-ctrl'>
+        FirstName : <input type="text" ng-model="firstName">
+        <br>
+        LastName : <input type="text" ng-model="lastName">
+        <br>
+        Hello {{firstName}} {{lastName}}
+        <br>
+    </body>
+</html>
