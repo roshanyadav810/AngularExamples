@@ -1,0 +1,19 @@
+<html ng-app='app'>
+    <head>
+        <meta charset="utf-8">
+        <title> its true start time</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script>
+            angular.module('app' , []).controller('app-ctrl' , function($scope){
+               $scope.names = ['roshan' , 'manu' , 'shubam'];
+            });
+        </script>
+        
+    </head>
+
+    <body ng-controller='app-ctrl'>
+        <div ng-repeat='name in names'>
+            <li> {{name}} </li>
+        </div>
+    </body>
+</html>
